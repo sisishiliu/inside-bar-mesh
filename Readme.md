@@ -1,4 +1,4 @@
-# Service Mesh Inside-Bar架构
+# InsideBar：比SideBar性能更好的Mesh架构方案
 > 基于shared library的高性能service mesh agent
 
 
