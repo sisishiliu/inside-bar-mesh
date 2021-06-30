@@ -1,5 +1,8 @@
 # InsideBar：比SideBar性能更好的Mesh架构方案
 > 基于shared library的高性能service mesh agent
+> 
+> Author：
+> * @十六
 
 
 ## 一、当前问题
