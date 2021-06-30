@@ -1,15 +1,13 @@
 # InsideBar：比SideBar性能更好的Mesh架构方案
-> 基于shared library的高性能service mesh agent
 > 
-> Author：
-> * @十六
+> by @十六
 
 
 ## 一、当前问题
 
 Service Mesh是微服务化的趋势，但在完整的Mesh架构里，原先SDK模式的调用每一次IO在Mesh方案里都要增加四次额外的进程间通信，即便是采用UnixDomainSocket代替TCP也没有什么本质用处，无法解决其与进程内调用的性能差异，此性能问题也一直是它无法得以大规模应用的拦路虎。
 
-那如何才能即获得 Mesh的架构解耦优势，又能不损失性能（与纯SDK模式相比）呢？在当前的主流的独立进程 sidebar-agent 方案之外，本方案介绍一种新型的 inside-bar mesh agent模式。
+那如何才能即获得 Mesh的架构解耦优势，又能不损失性能（与纯SDK模式相比）呢？在当前的主流的独立进程 sidebar-agent 方案之外，本方案介绍一种基于shared library的新型 inside-bar mesh agent模式。
 
 ## 二、Inside-bar模式的设计目标
 
